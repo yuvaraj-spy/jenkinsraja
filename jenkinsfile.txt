@@ -1,17 +1,15 @@
 pipeline{
     agent any
     stages{
-        stage('jenkins_execute'){
+        stage('Clones'){
             steps{
-             bat 'mvn package'  
+                bat 'mvn install'
             }
         }
-            stage('jenkins_execute2'){
+        stage('Completed'){
             steps{
-            bat  'mvn install'
+                bat 'java -jar target/java-project2-1.0-SNAPSHOT.jar'
             }
-        }
-  
-
-    }
+        }
+    }
 }

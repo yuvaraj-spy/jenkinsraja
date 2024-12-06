@@ -6,6 +6,5 @@ pipeline{
                 bat 'mvn install'
             }
         }
-       
-    }
+    }
 }

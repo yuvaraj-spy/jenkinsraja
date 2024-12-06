@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    stages{
+        stage('jenkins_execute'){
+            steps{
+             bat 'mvn package'  
+            }
+        }
+            stage('jenkins_execute2'){
+            steps{
+            bat  'mvn install'
+            }
+        }
+  
+
+    }
+}

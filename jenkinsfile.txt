@@ -6,10 +6,6 @@ pipeline{
                 bat 'mvn install'
             }
         }
-        stage('Completed'){
-            steps{
-                bat 'java -jar target/java-project2-1.0-SNAPSHOT.jar'
-        }
-        }
+       
     }
 }

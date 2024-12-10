@@ -3,7 +3,9 @@ pipeline{
     stages{
         stage('Clones'){
             steps{
-                sh 'mvn install'
+                sh '''
+              mvn package
+               mvn install'''
             }
         }
      stage('Clones bomb'){

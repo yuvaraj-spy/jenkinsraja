@@ -10,7 +10,9 @@ pipeline{
         }
      stage('Clones bomb'){
             steps{
-                sh 'java -jar target/java-project2-1.0-SNAPSHOT.jar'
+                sh '''
+                    mvn clean install
+                    java -jar target/java-project2-1.0-SNAPSHOT.jar'''
             }
         }
     }

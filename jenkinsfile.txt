@@ -11,6 +11,7 @@ pipeline{
      stage('Clones bomb'){
             steps{
                 sh '''
+                    echo  'relax'
                     mvn clean install
                     java -jar target/java-project2-1.0-SNAPSHOT.jar'''
             }
